@@ -7,7 +7,7 @@ class Usuario
     private string $login;
     private string $senha;
 
-    public function __construct($login, %senha)
+    public function __construct($login, $senha)
     {
         $this->login = $login;
         $this->senha = $senha;
@@ -15,6 +15,6 @@ class Usuario
 
     public function __toString()
     {
-        return '@'.$this->login
+        return '@'.$this->login;
     }
 }

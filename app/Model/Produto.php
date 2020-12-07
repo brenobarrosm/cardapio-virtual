@@ -6,13 +6,13 @@ class Produto
 {
     private string $nome = "Não informado";
     private float $preco;
-    public \DateTime $ultimaAlteracao;
+    public DateTime $ultimaAlteracao;
     public static $localidade = "pt-BR";
     public const LOCALIDADE = "pt-BR";
 
     public function getNome()
     {
-        return $this->nome
+        return $this->nome;
     }
 
     public function setNome()
