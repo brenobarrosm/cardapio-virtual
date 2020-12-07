@@ -4,9 +4,11 @@ namespace App\Model;
 
 class Produto 
 {
-    private string $nome = "Não informado";
+    private string $nome;
+    private string $descricao;
     private float $preco;
-    public DateTime $ultimaAlteracao;
+
+    public \DateTime $ultimaAlteracao;
     public static $localidade = "pt-BR";
     public const LOCALIDADE = "pt-BR";
 
@@ -15,9 +17,20 @@ class Produto
         return $this->nome;
     }
 
-    public function setNome()
+    public function setNome(string $nome)
     {
         $this->nome = filter_var($nome, FILTER_SANITIZE_STRING);
+        $this->ultimaAlteracao = new \DataTime();
+    }
+
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    public function setDescricao(string $descricao)
+    {
+        $this->descricao = filter_var($descricao, FILTER_SANITIZE_STRING);
         $this->ultimaAlteracao = new \DataTime();
     }
 
@@ -46,14 +59,11 @@ class Produto
         return $this->ultimaAlteracao->format('Y-m-d');
     }
 
-    public function __construct($nome="", $preco=0)
+    public function __construct($nome= "Não informado", $descricao= "Não informado", $preco=0)
     {
         $this->ultimaAlteracao = new \DateTime();
-        if(!empty($nome))
-        {
-            $this->nome = $nome;
-        }
-
+        $this->nome = $nome;
+        $this->descricao = $descricao;
         $this->preco = $preco;
     }
 }
