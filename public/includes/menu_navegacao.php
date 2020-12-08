@@ -9,7 +9,7 @@ if(isset($_SESSION['logado'])) {
 
 <nav>
   <div>
-  <a class="navbar-brand" href="#">Cardapio Web</a>
-  <a href="<?= $hrefLogin ?>">icone</a>
+  <a class="navbar-brand" href="#" class="link">Cardapio Web</a>
+  <a href="<?= $hrefLogin ?>" class="link">icone</a>
   </div>
 </nav>

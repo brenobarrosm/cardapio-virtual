@@ -22,23 +22,19 @@ if(isset($id) and isset($_SESSION['cardapio']))
 <main>
 
     <form action="/public/pages/produto/salvar.php" method="POST">
-        <div>
-        <input type="text" id="inputNome" placeholder="Nome do produto" name="nome" value="<?= isset($produto)? $produto->getNome():'' ?>">
-        <label for="inputNome">Nome</label>
+        <div class="row">
+            <label for="inputNome">Nome</label>
+            <input class="form-control" style="width:25%" type="text" id="inputNome" placeholder="Nome do produto" name="nome" value="<?= isset($produto)? $produto->getNome():'' ?>">
+            <label for="inputDescricao">Descricao</label>
+            <input class="form-control" style="width:25%" type="text" id="inputDescricao" placeholder="Insira uma descricao" name="descricao" value="<?= isset($produto)? $produto->getDescricao():'' ?>"> 
+            <label for="inputPreco">Preco</label>
+            <input class="form-control" style="width:25%" type="number" id="inputPreco" placeholder="Insira o preco" name="preco" value="<?= isset($produto)? $produto->getPreco():'' ?>">
         </div>
-        <div>
-        <input type="text" id="inputDescricao" placeholder="Insira uma descricao" name="descricao" value="<?= isset($produto)? $produto->getDescricao():'' ?>">
-        <label for="inputDescricao">Descricao</label>
-        </div>
-        <div>
-        <input type="number" id="inputPreco" placeholder="Insira o preco" name="preco" value="<?= isset($produto)? $produto->getPreco():'' ?>">
-        <label for="inputPreco">Preco</label>
-        </div>
-        <button type="submit">Salvar</button>
+        <button type="submit" class="btn btn-success" style="margin-top:15px">Salvar</button>
     </form>
 
 </main>
 
 
 
-<?php include_once __DIR__ . '/../../includes/cabecalho.php'; ?>
+<?php include_once __DIR__ . '/../../includes/rodape.php'; ?>

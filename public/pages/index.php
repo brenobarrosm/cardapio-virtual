@@ -15,16 +15,16 @@ if(isset($_SESSION['cardapio'])) {
 $btnCadastrarProduto = '';
 if(isset($_SESSION['logado'])) {
   $logado = $_SESSION['logado'];
-  $btnCadastrarProduto = '<a href="/public/pages/produto/form.php">Cadastrar Produto</a>';
+  $btnCadastrarProduto = '<a href="/public/pages/produto/form.php" class="btn btn-primary">Cadastrar Produto</a>';
 }
 
 
 ?>
 
-<main>
+<main class="container">
 <?= $btnCadastrarProduto ?>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">#</th>

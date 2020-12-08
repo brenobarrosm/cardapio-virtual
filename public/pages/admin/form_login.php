@@ -26,7 +26,7 @@ if(isset($_SESSION['erros']))
             <input type="password" id="inputSenha" placeholder="Insira sua senha" name="senha">
             <label for="inputSenha">Senha</label>
             </div>
-            <button type="submit">Entrar</button>
+            <button type="submit" class="btn btn-success">Entrar</button>
         </form>
     </section>
     
