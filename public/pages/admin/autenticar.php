@@ -20,7 +20,7 @@ if(!empty($usuario) and !empty($senha))
     }
 }
 
-$erro = "Usuário e senha devem ser preenchidos";
+$erro = "Usuário e senha devem ser preenchidos corretamente.";
 
 $_SESSION['erros'] = $erro;
 header('Location: /public/pages/admin/form_login.php');

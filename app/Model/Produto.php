@@ -20,7 +20,7 @@ class Produto
     public function setNome(string $nome)
     {
         $this->nome = filter_var($nome, FILTER_SANITIZE_STRING);
-        $this->ultimaAlteracao = new \DataTime();
+        $this->ultimaAlteracao = new \DateTime();
     }
 
     public function getDescricao()
@@ -31,7 +31,7 @@ class Produto
     public function setDescricao(string $descricao)
     {
         $this->descricao = filter_var($descricao, FILTER_SANITIZE_STRING);
-        $this->ultimaAlteracao = new \DataTime();
+        $this->ultimaAlteracao = new \DateTime();
     }
 
     public function getPreco()
@@ -62,8 +62,8 @@ class Produto
     public function __construct($nome= "Não informado", $descricao= "Não informado", $preco=0)
     {
         $this->ultimaAlteracao = new \DateTime();
-        $this->nome = $nome;
-        $this->descricao = $descricao;
-        $this->preco = $preco;
+        $this->setNome($nome);
+        $this->setDescricao($descricao);
+        $this->setPreco($preco);
     }
 }

@@ -3,7 +3,8 @@ use App\Model\Cardapio;
 use App\Model\Produto;
 
 require_once __DIR__.'/../../vendor/autoload.php';
-require_once __DIR__.'/../includes/cabecalho.php'; 
+require_once __DIR__.'/../includes/cabecalho.php';
+require_once __DIR__.'/../includes/menu_navegacao.php'; 
 
 $cardapio = new Cardapio();
 
