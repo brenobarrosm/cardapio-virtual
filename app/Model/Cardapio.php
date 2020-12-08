@@ -13,7 +13,22 @@
             return $this->produtos;
         }
 
-        public function salvarProduto(Produto $produto) {
-           $this->produtos[] = $produto;
+        public function salvarProduto(Produto $produto, $id=null) {
+
+            if(isset($id))
+            {
+                $this->produtos[$id] = $produto;
+            } else{
+                $this->produtos[] = $produto;
+            }
+
+        }
+
+        public function removerProdutoPorId(int $id) {
+            unset($this->produtos[$id]);
+        }
+
+        public function getProdutoPorId(int $id) {
+            return $this->produtos[$id];
         }
     }

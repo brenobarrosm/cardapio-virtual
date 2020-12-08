@@ -1,5 +1,6 @@
 <?php
 
+    use App\Model\Cardapio;
     use App\Model\Produto;
 
     require_once __DIR__.'/../../../vendor/autoload.php';
@@ -19,7 +20,14 @@
         $cardapio = unserialize($_SESSION['cardapio']);
     }
 
-    $cardapio->salvarProduto($produto);
+    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+    if(isset($id))
+    {
+        $cardapio->salvarProduto($produto, $id);
+    } else
+    {
+        $cardapio->salvarProduto($produto);
+    }
 
     $_SESSION['cardapio'] = serialize($cardapio);
 

@@ -41,7 +41,7 @@ class Produto
 
     public function getPrecoFormatado()
     {
-        return number_format($this->preco, 2, ',', '.');
+        return "R$ ".number_format($this->preco, 2, ',', '.');
     }
 
     public function setPreco(float $preco) 
