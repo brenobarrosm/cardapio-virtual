@@ -24,6 +24,10 @@
 
         }
 
+        public function atualizarProduto($id, Produto $produto) {
+            $this->produtos[$id] = $produto;
+        }
+
         public function removerProdutoPorId(int $id) {
             unset($this->produtos[$id]);
         }

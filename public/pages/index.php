@@ -40,7 +40,7 @@ if(isset($_SESSION['logado'])) {
       <td><?=$produto->getNome()?> <small>(<?= $produto->getDescricao() ?>)</small></td>
       <td><?= $produto->getPrecoFormatado() ?></td>
       <?= isset($logado) ? '<td>'. 
-                          '<a href="/public/pages/produto/editar.php?id='.$id.'">Editar</a>'. 
+                          '<a href="/public/pages/produto/form_editar.php?id='.$id.'">Editar</a>'. 
                           '<a href="/public/pages/produto/deletar.php?id='.$id.'">Remover</a> '. 
                           '</td>':"" ?>
     </tr>
