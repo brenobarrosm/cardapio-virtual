@@ -20,19 +20,19 @@ if(isset($id) and isset($_SESSION['cardapio']))
 
 ?>
 <main>
-
-    <form action="/public/pages/produto/salvar.php" method="POST">
-        <div class="row">
-            <label for="inputNome">Nome</label>
-            <input class="form-control" style="width:25%" type="text" id="inputNome" placeholder="Nome do produto" name="nome" value="<?= isset($produto)? $produto->getNome():'' ?>">
-            <label for="inputDescricao">Descricao</label>
-            <input class="form-control" style="width:25%" type="text" id="inputDescricao" placeholder="Insira uma descricao" name="descricao" value="<?= isset($produto)? $produto->getDescricao():'' ?>"> 
-            <label for="inputPreco">Preco</label>
-            <input class="form-control" style="width:25%" type="number" id="inputPreco" placeholder="Insira o preco" name="preco" value="<?= isset($produto)? $produto->getPreco():'' ?>">
-        </div>
-        <button type="submit" class="btn btn-success" style="margin-top:15px">Salvar</button>
-    </form>
-
+    <div class="container" style="margin:1rem;">
+        <form action="/public/pages/produto/salvar.php" method="POST">
+            <div class="row">
+                <label for="inputNome">Nome</label>
+                <input class="form-control" style="width:25%" type="text" id="inputNome" placeholder="Nome do produto" name="nome" value="<?= isset($produto)? $produto->getNome():'' ?>">
+                <label for="inputDescricao">Descricao</label>
+                <input class="form-control" style="width:25%" type="text" id="inputDescricao" placeholder="Insira uma descricao" name="descricao" value="<?= isset($produto)? $produto->getDescricao():'' ?>"> 
+                <label for="inputPreco">Preco</label>
+                <input class="form-control" style="width:25%" type="number" id="inputPreco" placeholder="Insira o preco" name="preco" value="<?= isset($produto)? $produto->getPreco():'' ?>">
+            </div>
+            <button type="submit" class="btn btn-success" style="margin-top:15px">Salvar</button>
+        </form>
+    </div>
 </main>
 
 

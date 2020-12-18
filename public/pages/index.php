@@ -15,7 +15,7 @@ if(isset($_SESSION['cardapio'])) {
 $btnCadastrarProduto = '';
 if(isset($_SESSION['logado'])) {
   $logado = $_SESSION['logado'];
-  $btnCadastrarProduto = '<a href="/public/pages/produto/form.php" class="btn btn-primary">Cadastrar Produto</a>';
+  $btnCadastrarProduto = '<a href="/public/pages/produto/form.php" class="btn btn-primary" style="margin:1rem;">Cadastrar Produto</a>';
 }
 
 
@@ -40,8 +40,9 @@ if(isset($_SESSION['logado'])) {
       <td><?=$produto->getNome()?> <small>(<?= $produto->getDescricao() ?>)</small></td>
       <td><?= $produto->getPrecoFormatado() ?></td>
       <?= isset($logado) ? '<td>'. 
-                          '<a href="/public/pages/produto/form_editar.php?id='.$id.'">Editar</a>'. 
-                          '<a href="/public/pages/produto/deletar.php?id='.$id.'">Remover</a> '. 
+                          '<a href="/public/pages/produto/form_editar.php?id='.$id.'" style="text-decoration:none; cursor:pointer; color:blue;">Editar</a>'.
+                          ', '.
+                          '<a href="/public/pages/produto/deletar.php?id='.$id.'" style="text-decoration:none; cursor:pointer; color:blue;">Remover</a> '. 
                           '</td>':"" ?>
     </tr>
   <?php } ?>
