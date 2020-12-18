@@ -29,7 +29,6 @@ if(isset($id) and isset($_SESSION['cardapio']))
             <input class="form-control" style="width:25%" type="text" id="inputDescricao" placeholder="Insira uma descricao" name="descricao" value="<?= isset($produto)? $produto->getDescricao():'' ?>"> 
             <label for="inputPreco">Novo preco</label>
             <input class="form-control" style="width:25%" type="number" id="inputPreco" placeholder="Insira o preco" name="preco" value="<?= isset($produto)? $produto->getPreco():'' ?>">
-            <?= $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT)?>
             <input type="hidden" name="id" id="id" value="<?=$id?>">
         </div>
         <button type="submit" class="btn btn-success" style="margin-top:15px">Salvar</button>

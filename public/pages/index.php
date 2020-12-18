@@ -24,7 +24,7 @@ if(isset($_SESSION['logado'])) {
 <main class="container">
 <?= $btnCadastrarProduto ?>
 
-<table class="table table-bordered">
+<table class="table table-bordered" style="margin-top:2.5rem;">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -40,7 +40,7 @@ if(isset($_SESSION['logado'])) {
       <td><?=$produto->getNome()?> <small>(<?= $produto->getDescricao() ?>)</small></td>
       <td><?= $produto->getPrecoFormatado() ?></td>
       <?= isset($logado) ? '<td>'. 
-                          '<a href="/public/pages/produto/form_editar.php?id='.$id.'" style="text-decoration:none; cursor:pointer; color:blue;">Editar</a>'.
+                          '<a href="/public/pages/admin/form_editar.php?id='.$id.'" style="text-decoration:none; cursor:pointer; color:blue;">Editar</a>'.
                           ', '.
                           '<a href="/public/pages/produto/deletar.php?id='.$id.'" style="text-decoration:none; cursor:pointer; color:blue;">Remover</a> '. 
                           '</td>':"" ?>
